@@ -15,12 +15,12 @@ export class HomeComponent implements OnInit {
   constructor(private dialog:MatDialog, private userService:UserService, private router:Router) { }
 
   ngOnInit(): void {
-    this.userService.checkToken().subscribe((response:any)=>{
-      this.router.navigate(['/cafe/dashboard']);
-    },(error:any)=>{
-      console.log(error);
-    }
-    )
+    // this.userService.checkToken().subscribe((response:any)=>{
+    //   this.router.navigate(['/cafe/dashboard']);
+    // },(error:any)=>{
+    //   console.log(error);
+    // }
+    // )
   }
 
   handleSignupAction(){

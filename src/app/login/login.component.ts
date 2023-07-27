@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { GlobalConstants } from '../shared/global-constants';
 import { SnackbarService } from '../snackbar.service';
 import { UserService } from '../user.service';
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -44,8 +45,10 @@ export class LoginComponent implements OnInit {
     this.userService.login(data).subscribe((response:any)=>{
       //this.ngxService.stop();
       this.dialogRef.close();
+      const user = jwt_decode(response.token)
       localStorage.setItem('token' , response.token);
       //alert("Successfully Login");
+      
       this.router.navigate(['/cafe/dashboard']);
     },(error: { error: { message: any; }; })=>{
       //this.ngxService.stop();

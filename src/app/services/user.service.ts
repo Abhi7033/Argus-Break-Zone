@@ -44,5 +44,9 @@ export class UserService {
       headers:new HttpHeaders().set('Content-Type' , 'application/json')
     })
   }
+  getProfile(){
+    console.log(this.httpClient.get(this.url + "/user/profile"));
+    return this.httpClient.get(this.url + "/user/profile");
+  }
  
 }

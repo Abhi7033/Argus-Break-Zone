@@ -79,7 +79,7 @@
 
                 <mat-form-field apperence="standard" fxFlex>
                     <mat-label>Price</mat-label>
-                    <input matInput formControlName="price" required>
+                    <input matInput formControlName="price" required readonly>
                     <mat-error *ngIf="manageOrderForm.controls.price.touched && manageOrderForm.controls.price.invalid">
                         <span *ngIf="manageOrderForm.controls.price.errors.required">This field is mandatory.</span>
                         <span *ngIf="manageOrderForm.controls.price.errors.pattern">This field is invalid.</span>

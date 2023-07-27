@@ -28,6 +28,8 @@ export class ManageUserComponent implements OnInit {
   tableData() {
     this.userService.getUsers().subscribe((response:any)=>{
       this.dataSource = new MatTableDataSource(response);
+      console.log(this.dataSource);
+      
     },(error:any)=>{
       console.log(error.error?.message);
       if(error.error?.message){

@@ -21,6 +21,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LoginComponent } from './login/login.component';
 import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
+import { ManageProfileComponent } from './material-component/manage-profile/manage-profile.component';
 //import { NgxUiLoaderConfig, NgxUiLoaderModule , SPINNER} from 'ngx-ui-loader';
 
 //import { NgxUiLoaderConfig , SPINNER} from 'ngx-ui-loader';
@@ -65,7 +66,8 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig={
     FormsModule, 
     MatButtonModule,
     MatIconModule, 
-    //NgxUiLoaderModule.forRoot(ngxUiLoaderConfig)
+  
+    // NgxUiLoaderModule.forRoot(ngxUiLoaderConfig)
   ],
   providers: [HttpClientModule, {provide:HTTP_INTERCEPTORS, useClass:TokenInterceptorInterceptor,multi:true}],
   bootstrap: [AppComponent]
